@@ -1,0 +1,10 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif,svg}", "/assets/*", "/*.{css,js}"]
+  },
+  "routes": [
+    { "route": "/about", "rewrite": "/about.html" },
+    { "route": "/contact", "rewrite": "/contact.html" }
+  ]
+}

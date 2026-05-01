@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Contact Gaurav Singh - IT Professional &amp; Systems Administrator">
+    <title>Contact — Gaurav Singh</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" type="image/svg+xml">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact — Gaurav Singh">
+    <meta property="og:description" content="Get in touch with Gaurav Singh - open to IT infrastructure, systems administration, and cloud environment opportunities.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Contact — Gaurav Singh">
+    <meta name="twitter:description" content="Get in touch with Gaurav Singh - open to IT infrastructure, systems administration, and cloud environment opportunities.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Trirong:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <!-- Theme: apply before paint to prevent flash -->
+    <script src="theme-init.js"></script>
+
+    <!-- Preload critical GSAP core -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" as="script" crossorigin="anonymous">
+
+    <!-- GSAP + ScrollTrigger + ScrollSmoother — deferred -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js" crossorigin="anonymous" defer></script>
+
+    <script src="contact.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="theme-light">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="index.html" style="text-decoration:none;color:inherit;"><span>{G+S}</span></a>
+        </div>
+        <div class="nav-right" id="nav-links">
+            <a href="work/work.html">WORK</a>
+            <a href="about/about.html">ABOUT</a>
+            <a href="contact.html" class="active-link">CONTACT</a>
+            <a href="comptia/learning.html">LEARNING</a>
+
+            <span class="divider">|</span>
+            <button id="theme-btn" class="nav-btn" aria-label="Toggle Theme">■ THEME ▼</button>
+            <button id="font-btn" class="nav-btn" aria-label="Toggle Font Size">AA ▼</button>
+        </div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <main class="container" id="main-content">
+
+                <!-- Hero / Title Card -->
+                <section class="contact-hero">
+                    <div class="corner-mark top-left"></div>
+                    <div class="corner-mark top-right"></div>
+                    <div class="corner-mark bottom-left"></div>
+                    <div class="corner-mark bottom-right"></div>
+
+                    <div class="card-header">
+                        <div class="header-block">
+                            GET IN <br>TOUCH
+                        </div>
+                        <div class="header-block align-right">
+                            gauravsinghcan98@gmail.com<br>
+                            +1 (514) 295-6028
+                        </div>
+                    </div>
+
+                    <div class="tiny-code">**GET IN TOUCH//OPEN TO OPPORTUNITIES</div>
+                </section>
+
+                <!-- Contact Form Section -->
+                <section class="contact-form-section">
+                    <div class="contact-grid">
+
+                        <!-- Left: Info -->
+                        <div class="contact-info">
+                            <h2>Let's Work<br>Together</h2>
+                            <p>
+                                Open to new opportunities in IT infrastructure, systems administration,
+                                and cloud environments. Feel free to reach out for collaboration,
+                                freelance work, or just to say hello.
+                            </p>
+
+                            <div class="contact-links">
+                                <a href="mailto:gauravsinghcan98@gmail.com" class="contact-link-item">
+                                    <span class="link-label">EMAIL</span>
+                                    gauravsinghcan98@gmail.com
+                                </a>
+                                <a href="tel:+15142956028" class="contact-link-item">
+                                    <span class="link-label">PHONE</span>
+                                    +1 (514) 295-6028
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/gaurav-singh-tech/" target="_blank" rel="noopener noreferrer"
+                                    class="contact-link-item">
+                                    <span class="link-label">LINKEDIN</span>
+                                    linkedin.com/in/gaurav-singh-tech/
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Form -->
+                        <form class="contact-form" onsubmit="handleContact(event)">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" placeholder="Your full name" autocomplete="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input type="text" id="contact-subject" name="subject" placeholder="What's this about?" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" name="message"
+                                    placeholder="Tell me about your project or opportunity..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message →</button>
+                        </form>
+
+                    </div>
+                </section>
+
+            </main>
+
+        </div><!-- #smooth-content -->
+    </div><!-- #smooth-wrapper -->
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+</body>
+
+</html>
