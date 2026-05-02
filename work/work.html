@@ -30,20 +30,19 @@
     <link rel="stylesheet" href="work.css" />
 
     <!-- Theme: apply before paint to prevent flash -->
-    <script src="../theme-init.js"></script>
+    <script type="module" src="../theme-init.js"></script>
 
     <!-- Preload critical GSAP core -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" as="script" crossorigin="anonymous">
 
-    <!-- GSAP + ScrollTrigger + ScrollSmoother — deferred -->
+    <!-- GSAP + ScrollTrigger + ScrollSmoother - deferred -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js" crossorigin="anonymous" defer></script>
 
-    <script src="../script.js" defer></script>
-    <script src="work.js" defer></script>
-    <script type="module" src="./work.js"></script>
+    <!-- Core Javascript -->
     <script type="module" src="../script.js"></script>
+    <script type="module" src="./work.js"></script>
     
     
   </head>
