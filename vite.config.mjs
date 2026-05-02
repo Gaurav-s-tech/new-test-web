@@ -20,11 +20,14 @@ export default defineConfig({
     }
   },
   plugins: [
-    viteStaticCopy({
-      targets: [
-        // Copy the already-built lanyard sub-project verbatim so the iframe works
-        { src: 'lanyard-project/dist', dest: 'lanyard-project' }
-      ]
-    })
-  ]
+      viteStaticCopy({
+        targets: [
+          // Your existing lanyard copy rule
+          { src: 'lanyard-project/dist', dest: 'lanyard-project' },
+          
+          // ADD THIS NEW LINE to force copy the certifications folder
+          { src: 'certifications', dest: '' } 
+        ]
+      })
+    ]
 })
