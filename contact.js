@@ -14,7 +14,7 @@ async function handleContact(e) {
     var orig = btn.textContent;
 
     // Honeypot: bots fill hidden fields — reject silently
-    if (form.querySelector('[name="_honey"]') && form.querySelector('[name="_honey"]').value) {
+    if (form.querySelector('[name="_honey"]') && form.querySelector('[name="_honey"]').checked) {
         btn.textContent = 'Message Sent ✓';
         form.reset();
         return;
@@ -52,5 +52,6 @@ async function handleContact(e) {
     } catch (err) {
         btn.textContent = 'Failed — Try Again';
         btn.disabled = false;
+        setTimeout(function () { btn.textContent = orig; }, 3000);
     }
 }
