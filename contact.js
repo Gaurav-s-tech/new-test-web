@@ -1,8 +1,11 @@
-// contact.js — Contact form handler
-// Uses Web3Forms (web3forms.com) to deliver submissions to gauravsinghcan98@gmail.com.
-// Replace WEB3FORMS_ACCESS_KEY below with the key emailed to you after visiting
-// https://web3forms.com and entering gauravsinghcan98@gmail.com.
-var WEB3FORMS_ACCESS_KEY = '71a3e283-4447-4e66-ab76-18ae12f40eaf';
+// contact.js — Contact form handler (Web3Forms)
+var _cfg = { endpoint: 'https://api.web3forms.com/submit', id: '71a3e283-4447-4e66-ab76-18ae12f40eaf' };
+
+var LIMITS = { name: 100, email: 254, subject: 150, message: 2000 };
+
+function sanitize(str, max) {
+    return String(str).slice(0, max).trim();
+}
 
 async function handleContact(e) {
     e.preventDefault();
@@ -10,33 +13,39 @@ async function handleContact(e) {
     var btn  = form.querySelector('.submit-btn');
     var orig = btn.textContent;
 
+    // Honeypot: bots fill hidden fields — reject silently
+    if (form.querySelector('[name="_honey"]') && form.querySelector('[name="_honey"]').value) {
+        btn.textContent = 'Message Sent ✓';
+        form.reset();
+        return;
+    }
+
+    var name    = sanitize(document.getElementById('contact-name').value,    LIMITS.name);
+    var email   = sanitize(document.getElementById('contact-email').value,   LIMITS.email);
+    var subject = sanitize(document.getElementById('contact-subject').value, LIMITS.subject) || 'Portfolio Contact';
+    var message = sanitize(document.getElementById('contact-message').value, LIMITS.message);
+
+    if (!name || !email || !message) {
+        btn.textContent = 'Fill required fields';
+        setTimeout(function () { btn.textContent = orig; }, 2500);
+        return;
+    }
+
     btn.textContent = 'Sending…';
     btn.disabled = true;
 
-    var payload = {
-        access_key: WEB3FORMS_ACCESS_KEY,
-        from_name:  'Portfolio Contact Form',
-        name:       document.getElementById('contact-name').value,
-        email:      document.getElementById('contact-email').value,
-        subject:    document.getElementById('contact-subject').value || 'Portfolio Contact',
-        message:    document.getElementById('contact-message').value
-    };
-
     try {
-        var res  = await fetch('https://api.web3forms.com/submit', {
+        var res  = await fetch(_cfg.endpoint, {
             method:  'POST',
             headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body:    JSON.stringify(payload)
+            body:    JSON.stringify({ access_key: _cfg.id, from_name: 'Portfolio Contact', name: name, email: email, subject: subject, message: message })
         });
         var data = await res.json();
 
         if (data.success) {
             btn.textContent = 'Message Sent ✓';
             form.reset();
-            setTimeout(function () {
-                btn.textContent = orig;
-                btn.disabled = false;
-            }, 4000);
+            setTimeout(function () { btn.textContent = orig; btn.disabled = false; }, 4000);
         } else {
             throw new Error(data.message || 'Submission failed');
         }
