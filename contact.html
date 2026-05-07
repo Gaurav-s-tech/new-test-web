@@ -9,7 +9,6 @@
     <title>Contact — Gaurav Singh</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" type="image/svg+xml">
 
-    <!-- Open Graph / Social Sharing -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Contact — Gaurav Singh">
     <meta property="og:description" content="Get in touch with Gaurav Singh - open to IT infrastructure, systems administration, and cloud environment opportunities.">
@@ -17,7 +16,6 @@
     <meta name="twitter:title" content="Contact — Gaurav Singh">
     <meta name="twitter:description" content="Get in touch with Gaurav Singh - open to IT infrastructure, systems administration, and cloud environment opportunities.">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -27,13 +25,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
 
-    <!-- Theme: apply before paint to prevent flash -->
     <script src="theme-init.js"></script>
 
-    <!-- Preload critical GSAP core -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" as="script" crossorigin="anonymous">
 
-    <!-- GSAP + ScrollTrigger + ScrollSmoother — deferred -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js" crossorigin="anonymous" defer></script>
@@ -71,7 +66,6 @@
 
             <main class="container" id="main-content">
 
-                <!-- Hero / Title Card -->
                 <section class="contact-hero">
                     <div class="corner-mark top-left"></div>
                     <div class="corner-mark top-right"></div>
@@ -91,11 +85,9 @@
                     <div class="tiny-code">**GET IN TOUCH//OPEN TO OPPORTUNITIES</div>
                 </section>
 
-                <!-- Contact Form Section -->
                 <section class="contact-form-section">
                     <div class="contact-grid">
 
-                        <!-- Left: Info -->
                         <div class="contact-info">
                             <h2>Let's Work<br>Together</h2>
                             <p>
@@ -122,16 +114,16 @@
                             </div>
                         </div>
 
-                        <!-- Right: Form -->
                         <form class="contact-form" onsubmit="handleContact(event)">
+                            <input type="checkbox" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                            
                             <div class="form-group">
                                 <label for="contact-name">Name</label>
                                 <input type="text" id="contact-name" name="name" placeholder="Your full name" autocomplete="name" required>
                             </div>
                             <div class="form-group">
                                 <label for="contact-email">Email</label>
-                                <input type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email"
-                                    required>
+                                <input type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email" required>
                             </div>
                             <div class="form-group">
                                 <label for="contact-subject">Subject</label>
@@ -139,8 +131,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="contact-message">Message</label>
-                                <textarea id="contact-message" name="message"
-                                    placeholder="Tell me about your project or opportunity..." required></textarea>
+                                <textarea id="contact-message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Send Message →</button>
                         </form>
@@ -150,10 +141,7 @@
 
             </main>
 
-        </div><!-- #smooth-content -->
-    </div><!-- #smooth-wrapper -->
-
-    <button id="back-to-top" aria-label="Back to top">↑</button>
+        </div></div><button id="back-to-top" aria-label="Back to top">↑</button>
 
 </body>
 
