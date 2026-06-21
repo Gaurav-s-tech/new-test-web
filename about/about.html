@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="About Gaurav Singh - IT Professional &amp; Systems Administrator based in Edmonton, Canada.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About — Gaurav Singh">
+    <meta property="og:description" content="IT Professional &amp; Systems Administrator based in Edmonton, Canada, specializing in Azure, Active Directory, and cloud environments.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="About — Gaurav Singh">
+    <meta name="twitter:description" content="IT Professional &amp; Systems Administrator based in Edmonton, Canada, specializing in Azure, Active Directory, and cloud environments.">
+    <title>About | Gaurav Singh</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Trirong:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="about.css">
+
+    <!-- Theme: apply before paint to prevent flash -->
+    <script src="../theme-init.js"></script>
+
+    <!-- Preload critical GSAP core -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" as="script" crossorigin="anonymous">
+
+    <!-- GSAP + ScrollTrigger + ScrollSmoother — deferred -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js" crossorigin="anonymous" defer></script>
+
+    <script src="../script.js" defer></script>
+    <script src="about.js" defer></script>
+</head>
+
+<body class="theme-light">
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>{G+S}</span></a>
+        </div>
+        <div class="nav-right" id="nav-links">
+            <a href="../work/work.html">WORK</a>
+            <a href="about.html" class="active-link">ABOUT</a>
+            <a href="../contact.html">CONTACT</a>
+            <a href="../comptia/learning.html">LEARNING</a>
+
+            <span class="divider">|</span>
+            <button id="theme-btn" class="nav-btn" aria-label="Toggle Theme">■ THEME ▼</button>
+            <button id="font-btn" class="nav-btn" aria-label="Toggle Font Size">AA ▼</button>
+        </div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <main class="container" id="main-content">
+                <section class="about-card">
+                    <div class="corner-mark top-left"></div>
+                    <div class="corner-mark top-right"></div>
+                    <div class="corner-mark bottom-left"></div>
+                    <div class="corner-mark bottom-right"></div>
+
+                    <div class="card-header">
+                        <div class="header-block">
+                            SYSADMIN // IT SUPPORT <br> EDMONTON, AB
+                        </div>
+                        <div class="header-block align-right">
+                            STATUS: ACTIVE<br>
+                            READY FOR DEPLOYMENT
+                        </div>
+                    </div>
+
+                    <div class="about-content-wrapper">
+                        <div class="about-text-section">
+                            <h1 class="about-title">WHO AM I</h1>
+                            <div class="terminal-window">
+                                <div class="terminal-header">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="terminal-title">Techie@gaurav-sys:~</span>
+                                </div>
+                                <div class="terminal-body" id="typewriter-text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-grid">
+                            <div class="grid-box experience-box">
+                                <h2 class="box-title">PROJECTS</h2>
+                                <ul class="timeline">
+                                    
+                                    <li>
+                                        <span class="date">Completed</span>
+                                        <div class="project-details">
+                                            <h3><a href="https://github.com/Gaurav-s-tech/project-1" target="_blank" rel="noopener noreferrer">Albion University Enterprise Network Design</a></h3>
+                                            <p>Personal Project &amp; Infrastructure Deployment</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="date">Completed</span>
+                                        <div class="project-details">
+                                            <h3><a href="https://github.com/Gaurav-s-tech/IT-Support-LABS-ADDS-Microsoft-365-ITIL/tree/main/Active-Directory" target="_blank" rel="noopener noreferrer">Active Directory Home Lab Project</a></h3>
+                                            <p>Deployed a Windows Server-based AD environment with Group Policies to control user settings, login scripts, and access controls.</p>
+                                        </div>
+                                    </li>
+                                     <li>
+                                        <span class="date">Completed</span>
+                                        <div class="project-details">
+                                            <h3><a href="https://github.com/Gaurav-s-tech/IT-Support-LABS-ADDS-Microsoft-365-ITIL/tree/main/Microsoft-365">Microsoft 365</a></h3>
+                                            <p>Installed and configured Azure AD Connect to sync local AD users and groups to Microsoft Entra ID, establishing a hybrid identity model.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="grid-box education-box">
+                                <h2 class="box-title">EDUCATION</h2>
+                                <ul class="timeline">
+                                    <li>
+                                        <span class="date">2019 - 2021</span>
+                                        <h3>Microcomputer and Networking</h3>
+                                        <p>Herzing College</p>
+                                    </li>
+                                    <li>
+                                        <span class="date">2017 - 2018</span>
+                                        <h3>Information Technology Diploma</h3>
+                                        <p>Advance American Institute</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="footer-block">
+                            CURRENTLY STUDYING:<br>
+                            Comptia Network +
+                        </div>
+                        <div class="footer-block align-right">
+                            LEARNING FULL-STACK DEV<br>
+                            BASICS TO DEPLOYMENT
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div><!-- #smooth-content -->
+    </div><!-- #smooth-wrapper -->
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/images/*.{png,jpg,gif,svg}", "/assets/*", "/*.{css,js}", "/certifications/*", "/svg/*", "/lanyard-project/*", "/comptia/*.pdf"]
+  },
+  "routes": [
+    { "route": "/about",   "rewrite": "/about/about.html" },
+    { "route": "/contact", "rewrite": "/contact.html" },
+    { "route": "/work",    "rewrite": "/work/work.html" },
+    { "route": "/learning","rewrite": "/comptia/learning.html" }
+  ],
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "SAMEORIGIN",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "camera=(), microphone=(), geolocation=()"
+  }
+}

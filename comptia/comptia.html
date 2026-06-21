@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="CompTIA Certification Learning Resources — Gaurav Singh">
+    <title>CompTIA Resources — Gaurav Singh</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💼</text></svg>" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&family=Trirong:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="subpage.css">
+
+    <!-- Theme: apply before paint to prevent flash -->
+    <script src="../theme-init.js"></script>
+
+    <!-- Preload critical GSAP core -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" as="script" crossorigin="anonymous">
+
+    <!-- GSAP + ScrollTrigger + ScrollSmoother — deferred -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js" crossorigin="anonymous" defer></script>
+
+    <script src="../script.js" defer></script>
+</head>
+
+<body class="theme-light">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Shared SVG Definitions for PDF Icons -->
+    <svg style="display: none;">
+        <symbol id="icon-pdf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+        </symbol>
+        <symbol id="icon-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+        </symbol>
+    </svg>
+
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="../index.html" style="text-decoration: none; color: inherit;"><span>{G+S}</span></a>
+        </div>
+        <div class="nav-right" id="nav-links">
+            <a href="../work/work.html">WORK</a>
+            <a href="../about/about.html">ABOUT</a>
+            <a href="../contact.html">CONTACT</a>
+            <a href="learning.html" class="active-link">LEARNING</a>
+
+            <span class="divider">|</span>
+            <button id="theme-btn" class="nav-btn" aria-label="Toggle Theme">■ THEME ▼</button>
+            <button id="font-btn" class="nav-btn" aria-label="Toggle Font Size">AA ▼</button>
+        </div>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <main class="container" id="main-content">
+
+                <!-- Back Link -->
+                <a href="learning.html" class="back-link">← Back to Learning Hub</a>
+
+                <!-- Hero / Title Card -->
+                <section class="subpage-hero">
+                    <div class="corner-mark top-left"></div>
+                    <div class="corner-mark top-right"></div>
+                    <div class="corner-mark bottom-left"></div>
+                    <div class="corner-mark bottom-right"></div>
+
+                    <div class="card-header">
+                        <div class="header-block">
+                            COMPTIA <br>CERTIFICATIONS
+                        </div>
+                        <div class="header-block align-right">
+                            STATUS: IN PROGRESS<br>
+                            ACTIVELY STUDYING
+                        </div>
+                    </div>
+
+                    <div class="subpage-hero-content">
+                        <h1 class="subpage-title">COMPTIA<br>RESOURCES</h1>
+                        <p class="subpage-subtitle">// COMPTIA_CERTIFICATIONS<br>// SELECT A CERTIFICATION BELOW</p>
+                    </div>
+
+                    <div class="tiny-code">**COMPTIA//CERTIFICATION_RESOURCES</div>
+                </section>
+
+                <!-- ═══ Certification Cards Grid ═══ -->
+                <section class="cert-selector-section">
+
+                    <div class="cert-cards-grid">
+
+                        <!-- ── Card 1: Network+ ── -->
+                        <div class="cert-select-card active" id="cert-network" role="button" tabindex="0" aria-selected="true" onclick="toggleCert('network')">
+                            <div class="cert-select-icon">
+                                <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages4.cmp.optimizely.com%2F893bb620b71111ef888eca5646afc7d8%3Fwidth%3D300%26height%3D300&w=640&q=90" alt="Network+ Icon" class="cert-logo-svg cert-logo-raster" loading="lazy">
+                            </div>
+                            <span class="cert-select-tag">N10-009</span>
+                            <span class="cert-select-status available">3 Resources</span>
+                        </div>
+
+                        <!-- ── Card 2: Linux+ ── -->
+                        <div class="cert-select-card" id="cert-linux" role="button" tabindex="0" aria-selected="false" onclick="toggleCert('linux')">
+                            <div class="cert-select-icon">
+                                <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages2.cmp.optimizely.com%2F877803deb71111efac96d615e91762a5%3Fwidth%3D300%26height%3D300&w=640&q=90" alt="Linux+ Icon" class="cert-logo-svg cert-logo-raster" loading="lazy">
+                            </div>
+                            <span class="cert-select-tag">XK0-005</span>
+                            <span class="cert-select-status available">3 Resources</span>
+                        </div>
+
+                        <!-- ── Card 3: A+ ── -->
+                        <div class="cert-select-card" id="cert-aplus" role="button" tabindex="0" aria-selected="false" onclick="toggleCert('aplus')">
+                            <div class="cert-select-icon">
+                                <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages3.cmp.optimizely.com%2F83adafb0b71111ef888eca5646afc7d8%3Fwidth%3D300%26height%3D300&w=640&q=90" alt="A+ Icon" class="cert-logo-svg cert-logo-raster" loading="lazy">
+                            </div>
+                            <span class="cert-select-tag">220-1101 / 1102</span>
+                            <span class="cert-select-status available">2 Resources</span>
+                        </div>
+
+                        <!-- ── Card 4: Security+ ── -->
+                        <div class="cert-select-card" id="cert-security" role="button" tabindex="0" aria-selected="false" onclick="toggleCert('security')">
+                            <div class="cert-select-icon">
+                                <img src="https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages4.cmp.optimizely.com%2F8623b0fab71111efac96d615e91762a5%3Fwidth%3D300%26height%3D300&w=640&q=90" alt="Security+ Icon" class="cert-logo-svg cert-logo-raster" loading="lazy">
+                            </div>
+                            <span class="cert-select-tag">SY0-701</span>
+                            <span class="cert-select-status available">3 Resources</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- ═══ PDF Panels (expandable) ═══ -->
+                <section class="cert-panels-section">
+
+                    <!-- ── Network+ Panel ── -->
+                    <div class="cert-panel open" id="panel-network">
+                        <div class="panel-header">
+                            <h2 class="section-title">CompTIA Network+ (N10-009)</h2>
+                            <p class="panel-description">
+                                Study materials I'm using to prepare for the CompTIA Network+ certification.
+                                Feel free to download and use them for your own learning journey.
+                            </p>
+                        </div>
+
+                        <div class="pdf-list">
+                            <a href="full-learning-nplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Full Learning Guide</span>
+                                    <span class="pdf-row-desc">Comprehensive study guide covering all N+ objectives</span>
+                                </div>
+                                <span class="pdf-row-size">969 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+
+                            <a href="exam-refresh-nplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Exam Refresh</span>
+                                    <span class="pdf-row-desc">Quick review & cram notes for last-minute preparation</span>
+                                </div>
+                                <span class="pdf-row-size">309 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+
+                            <a href="q-a-nplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Questions & Answers</span>
+                                    <span class="pdf-row-desc">Practice Q&A for self-assessment and exam readiness</span>
+                                </div>
+                                <span class="pdf-row-size">518 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ── Linux+ Panel ── -->
+                    <div class="cert-panel" id="panel-linux">
+                        <div class="panel-header">
+                            <h2 class="section-title">CompTIA Linux+ (XK0-005)</h2>
+                            <p class="panel-description">
+                                Study materials for the CompTIA Linux+ certification covering system administration,
+                                scripting, and Linux fundamentals.
+                            </p>
+                        </div>
+
+                        <div class="pdf-list">
+                            <a href="full-learning-lplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Full Learning Guide</span>
+                                    <span class="pdf-row-desc">Comprehensive study guide covering all Linux+ objectives</span>
+                                </div>
+                                <span class="pdf-row-size">976 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+
+                            <a href="exam-refresh-lplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Exam Refresh</span>
+                                    <span class="pdf-row-desc">Quick review & cram notes for last-minute preparation</span>
+                                </div>
+                                <span class="pdf-row-size">484 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+
+                            <a href="q-a-lplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Questions & Answers</span>
+                                    <span class="pdf-row-desc">Practice Q&A for self-assessment and exam readiness</span>
+                                </div>
+                                <span class="pdf-row-size">546 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ── A+ Panel ── -->
+                    <div class="cert-panel" id="panel-aplus">
+                        <div class="panel-header">
+                            <h2 class="section-title">CompTIA A+ (220-1101 / 1102)</h2>
+                            <p class="panel-description">
+                                Study materials for the CompTIA A+ certification covering hardware, networking,
+                                troubleshooting, and operating systems.
+                            </p>
+                        </div>
+
+                        <div class="pdf-list">
+                            <a href="full-learning-aplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Full Learning Guide</span>
+                                    <span class="pdf-row-desc">Comprehensive study guide covering all A+ objectives</span>
+                                </div>
+                                <span class="pdf-row-size">747 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+
+                            <a href="q-a-aplus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Questions & Answers</span>
+                                    <span class="pdf-row-desc">Practice Q&A for self-assessment and exam readiness</span>
+                                </div>
+                                <span class="pdf-row-size">480 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- ── Security+ Panel ── -->
+                    <div class="cert-panel" id="panel-security">
+                        <div class="panel-header">
+                            <h2 class="section-title">CompTIA Security+ (SY0-701)</h2>
+                            <p class="panel-description">
+                                Study materials for the CompTIA Security+ certification covering cybersecurity threats,
+                                risk management, cryptography, and identity management.
+                            </p>
+                        </div>
+
+                        <div class="pdf-list">
+                            <a href="full-learning-splus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Full Learning Guide</span>
+                                    <span class="pdf-row-desc">Comprehensive study guide covering all Security+ objectives</span>
+                                </div>
+                                <span class="pdf-row-size">878 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+
+                            <a href="exam-refresh-splus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Exam Refresh</span>
+                                    <span class="pdf-row-desc">Quick review & cram notes for last-minute preparation</span>
+                                </div>
+                                <span class="pdf-row-size">351 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+
+                            <a href="q-a-splus.pdf" download class="pdf-row">
+                                <div class="pdf-row-icon">
+                                    <svg><use href="#icon-pdf"/></svg>
+                                </div>
+                                <div class="pdf-row-info">
+                                    <span class="pdf-row-title">Questions & Answers</span>
+                                    <span class="pdf-row-desc">Practice Q&A for self-assessment and exam readiness</span>
+                                </div>
+                                <span class="pdf-row-size">833 KB</span>
+                                <div class="pdf-row-action">
+                                    <svg width="18" height="18"><use href="#icon-download"/></svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- Disclaimer -->
+                <section class="resources-footer-section">
+                    <p>These materials are shared for educational purposes. All trademarks belong to their
+                        respective owners.</p>
+                </section>
+
+            </main>
+
+        </div><!-- #smooth-content -->
+    </div><!-- #smooth-wrapper -->
+
+    <button id="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="cert-toggle.js"></script>
+
+</body>
+
+</html>
